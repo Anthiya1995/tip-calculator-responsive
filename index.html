@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tip Calculator</title>
+</head>
+
+<body class="flex justify-center items-center h-screen font-serif text-orange-950">
+    <div class="flex flex-col justify-center w-auto h-64 bg-orange-100 rounded-md drop-shadow-md">
+      <h1 class="text-center text-3xl font-bold text-orange-600">Tip Calculator</h1>
+      <div id="input-groups" class="flex flex-col sm:flex-row p-6">
+        <div class="flex pr-2">
+          <label for="billAmount" class="pr-1">Bill Amount</label>
+          <input type="text" id="billAmount" placeholder="0.00" size="10">
+        </div>
+        <div class="flex">
+          <label for="tip" class="pr-1">Tip Percentage</label>
+          <select id="tip">
+            <option value="10%">10%</option>
+            <option value="15%">15%</option>
+            <option value="20%">20%</option>
+          </select>
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="py-1 px-4 bg-orange-400 text-white rounded-lg shadow-md hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-opacity-75" type="button" id="calculate-button">Calculate Tip</button>
+      </div>
+      <div class="total-amount text-center pt-6">
+        <span>Total Amount: THB <span id="total-amount">00.00</span></span>
+      </div>
+    </div>
+    <script src="tipCal.js"></script>
+  </body>
+
+
+</html>
